@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+.app-container{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cal-container{
+    min-width: 400px;
+}
+.cal-container .top-cal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cal-container .top-cal .right-top-cal{
+    display: flex;
+    gap: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cal-container .top-cal .right-top-cal p{
+    align-self: flex-end;
+    font-size: 0.7rem;
+}
+.cal-style p{
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+.cal-style-square{
+    width: 100%;
+    height: 15px;
+    border-radius: 50px;
+    background-color: white;
+}
+.cal-style-square{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+}
+.cal-display{
+    height: 90px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 1rem;
+    margin: 1rem 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cal-body .cal-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
-
-.App-link {
-  color: #61dafb;
+.cal-item:hover{
+    background-color: #52087B;
+    color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reset{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.equal{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.cal-body{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 1rem;
+    background-color: #1D0836;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    height: 300px;
+    border-radius: 10px;
 }
